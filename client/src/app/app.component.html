@@ -1,12 +1,1 @@
-
-First name: <input [(ngModel)]="newUser.fname" type="text"><br><br>
-Last name: <input [(ngModel)]="newUser.lname" type="text"><br><br>
-<button (click)="createUsers()">Add users</button><br><br>
-<button (click)="getUsers()">Get users</button><br>
-<ul>
-    @for (user of users; track user._id){
-  <li>{{user.fname}} {{user.lname}} <button (click)="deleteUsers(user._id)">Delete</button></li> 
-}@empty {
-  <span>List of users</span>
-}
-</ul>
+<app-users></app-users>
