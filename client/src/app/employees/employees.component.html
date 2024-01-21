@@ -1,0 +1,21 @@
+<p>employees works!</p>
+
+<!-- 
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">First name:</label> <input [(ngModel)]="newUser.fname" type="text"><br><br>
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Last name:</label> <input [(ngModel)]="newUser.lname" type="text"><br><br>
+  </div>
+  
+  <button class="btn btn-success" (click)="createUsers()">Add users</button><br><br> -->
+  
+  <button class="btn btn-success" (click)="getEmployees()">Get employee</button><br>
+  <ul>
+      @for(employee of employees; track employee._id){
+    <li>{{employee.fname}} {{employee.lname}} <button (click)="deleteEmployees(employee._id)">Delete</button>&nbsp;
+        <button (click)="updateEmployees(employee._id)">Edit</button></li>
+  }@empty {
+    <span>List of employee</span>
+  }
+  </ul>

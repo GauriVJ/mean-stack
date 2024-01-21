@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
-import { UsersComponent } from './users/users.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        UsersComponent,
+        EmployeesComponent,
+        AddEmployeeComponent,
+        EditEmployeeComponent
     ],
     imports: [
       BrowserModule,

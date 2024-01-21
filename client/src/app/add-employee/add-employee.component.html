@@ -1,0 +1,9 @@
+<p>add-employee works!</p>
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">First name:</label> <input [(ngModel)]="newEmployee.fname" type="text"><br><br>
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Last name:</label> <input [(ngModel)]="newEmployee.lname" type="text"><br><br>
+  </div>
+  
+  <button class="btn btn-success" (click)="createEmployees()">Add Employees</button><br><br>

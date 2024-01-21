@@ -1,7 +1,8 @@
 var express = require('express');
 const mongoose = require('mongoose');
-var usersRouter = require('./api/user/user.route');
+var employeesRouter = require('./api/employee/employee.route');
 var tasksRouter = require('./api/task/task.route');
+var usersRouter = require('./api/users/user.route');
 var app = express();
 require('dotenv').config;
 
@@ -20,8 +21,9 @@ mongoose.connect("mongodb+srv://gvjadhav039:123Gaurijadhav@cluster0.lwkuhm4.mong
   console.log(err);
   console.log('Error occured while connecting to mongo')
 })
-app.use('/users', usersRouter);
+app.use('/employees', employeesRouter);
 app.use('/tasks', tasksRouter);
+app.use('/users', usersRouter);
 
 app.listen(3000, () => {
   console.log('listening on http://localhost:3000');
